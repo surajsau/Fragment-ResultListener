@@ -47,7 +47,7 @@ class TabFragment1 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         activityButton?.setOnClickListener { setFragmentResult("activity", Bundle().apply { putString("source", "Tab1") }) }
-        fragmentButton?.setOnClickListener { setFragmentResult("fragment", Bundle().apply { putString("source", "Tab1") }) }
+        fragmentButton?.setOnClickListener { setFragmentResult("main1", Bundle().apply { putString("source", "Tab1") }) }
         childButton?.setOnClickListener { childFragmentManager.setFragmentResult("child", Bundle().apply { putString("source", "Tab1") }) }
 
         bg?.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.tab1))
